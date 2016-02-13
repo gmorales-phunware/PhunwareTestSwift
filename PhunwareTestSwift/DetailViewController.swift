@@ -15,7 +15,7 @@ class DetailViewController: UIViewController, UIScrollViewDelegate, MFMailCompos
     
     @IBOutlet weak var dateLabel: UILabel! {
         didSet {
-//            dateLabel.textColor = .purpleColor()
+            //            dateLabel.textColor = .purpleColor()
         }
     }
     
@@ -167,6 +167,11 @@ class DetailViewController: UIViewController, UIScrollViewDelegate, MFMailCompos
             }
         }
         activityViewController.completionWithItemsHandler = completionBlock
+        
+        if UI_USER_INTERFACE_IDIOM() == .Pad {
+            activityViewController.popoverPresentationController!.barButtonItem = self.navigationItem.rightBarButtonItem;
+        }
+        
         self.presentViewController(activityViewController, animated: true, completion: { () -> Void in
             UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: true)
             self.navigationController?.navigationBar.tintColor = .whiteColor()
