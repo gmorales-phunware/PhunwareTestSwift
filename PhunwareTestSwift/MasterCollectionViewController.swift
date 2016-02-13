@@ -12,7 +12,6 @@ import MobileCoreServices
 import ReachabilitySwift
 import Alamofire
 import AlamofireImage
-import RappleProgressHUD
 
 
 private let reuseIdentifier = "Cell"
@@ -157,8 +156,7 @@ class MasterCollectionViewController: UICollectionViewController, UICollectionVi
     func loadFeed() {
         let hud = GMHudView(title: "Loading...", loading: true)
         hud.show()
-        
-        Alamofire.request(.GET, "https://dl.dropboxusercontent.com/u/733674/PhunwareHomework/feed.json") .responseJSON { response in // 1
+        Alamofire.request(.GET, "https://raw.githubusercontent.com/phunware/services-interview-resources/master/feed.json") .responseJSON { response in // 1
             print(response.result)   // result of response serialization
             
             if (response.result.isSuccess) {
