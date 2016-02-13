@@ -27,7 +27,6 @@
 		00F3F2C11C6ECEFE00C283A5 /* GMHudView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F3F2BC1C6ECEFE00C283A5 /* GMHudView.m */; };
 		00F3F2C21C6ECEFE00C283A5 /* GMHUDWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F3F2BE1C6ECEFE00C283A5 /* GMHUDWindow.m */; };
 		00F3F2C31C6ECEFE00C283A5 /* GMHUDWindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F3F2C01C6ECEFE00C283A5 /* GMHUDWindowViewController.m */; };
-		00F3F2C51C6ED6E100C283A5 /* ViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F3F2C41C6ED6E100C283A5 /* ViewControllerSpec.swift */; };
 		00F3F2C71C6ED81E00C283A5 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00F3F2C61C6ED81E00C283A5 /* Quick.framework */; };
 		A8AF9ADF607FC7B4AFFC28CF /* Pods_PhunwareTestSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 768901F50013C2959228E296 /* Pods_PhunwareTestSwift.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D99EB1B99128934AC0AC3778 /* Pods_PhunwareTestSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1FFFB6F2B4E968C61F2294 /* Pods_PhunwareTestSwiftTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -81,7 +80,6 @@
 		00F3F2BE1C6ECEFE00C283A5 /* GMHUDWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMHUDWindow.m; sourceTree = "<group>"; };
 		00F3F2BF1C6ECEFE00C283A5 /* GMHUDWindowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMHUDWindowViewController.h; sourceTree = "<group>"; };
 		00F3F2C01C6ECEFE00C283A5 /* GMHUDWindowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMHUDWindowViewController.m; sourceTree = "<group>"; };
-		00F3F2C41C6ED6E100C283A5 /* ViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerSpec.swift; sourceTree = "<group>"; };
 		00F3F2C61C6ED81E00C283A5 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = "Pods/../build/Debug-iphoneos/Quick.framework"; sourceTree = "<group>"; };
 		37C239971F5C35176C31DD75 /* Pods-PhunwareTestSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhunwareTestSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhunwareTestSwift/Pods-PhunwareTestSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		51752EFA9E50EB5B7EEB4D50 /* Pods-PhunwareTestSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhunwareTestSwiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhunwareTestSwiftTests/Pods-PhunwareTestSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -173,7 +171,6 @@
 			children = (
 				00F3F29B1C6E2E6F00C283A5 /* PhunwareTestSwiftTests.swift */,
 				00F3F29D1C6E2E6F00C283A5 /* Info.plist */,
-				00F3F2C41C6ED6E100C283A5 /* ViewControllerSpec.swift */,
 			);
 			path = PhunwareTestSwiftTests;
 			sourceTree = "<group>";
@@ -520,7 +517,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				00F3F29C1C6E2E6F00C283A5 /* PhunwareTestSwiftTests.swift in Sources */,
-				00F3F2C51C6ED6E100C283A5 /* ViewControllerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -701,7 +697,6 @@
 		};
 		00F3F2A11C6E2E6F00C283A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 62BCE36769CB4DDE79D63624 /* Pods-PhunwareTestSwiftTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -719,7 +714,6 @@
 		};
 		00F3F2A21C6E2E6F00C283A5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 51752EFA9E50EB5B7EEB4D50 /* Pods-PhunwareTestSwiftTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (

@@ -90,6 +90,7 @@
                                     <constraint firstAttribute="bottom" secondItem="h3K-eT-sCc" secondAttribute="bottom" id="sXK-9E-cQD"/>
                                     <constraint firstItem="I7S-av-L70" firstAttribute="top" secondItem="pZm-cW-Giq" secondAttribute="bottom" constant="1" id="x04-8h-iDN"/>
                                 </constraints>
+                                <size key="customSize" width="600" height="248"/>
                                 <connections>
                                     <outlet property="descLabel" destination="I7S-av-L70" id="Xja-Gs-HYk"/>
                                     <outlet property="locationLabel" destination="pZm-cW-Giq" id="HsC-8N-BAS"/>
