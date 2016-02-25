@@ -12,6 +12,7 @@ import MobileCoreServices
 import ReachabilitySwift
 import Alamofire
 import AlamofireImage
+import STLocationRequest
 
 
 private let reuseIdentifier = "Cell"
@@ -36,6 +37,9 @@ class MasterCollectionViewController: UICollectionViewController, UICollectionVi
         checkInternet()
         loadFeed()
         if #available(iOS 9.0, *) { setupCoreSpotlight() }
+        
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Location", style: .Plain, target: self, action: "showLocationRequest")
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -108,6 +112,7 @@ class MasterCollectionViewController: UICollectionViewController, UICollectionVi
     }
     
     // MARK: - Orientation
+    @available(iOS, deprecated=8.0)
     override func willRotateToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval) {
         super.willRotateToInterfaceOrientation(toInterfaceOrientation, duration: duration)
         self.collectionView?.invalidateIntrinsicContentSize()
@@ -222,7 +227,10 @@ class MasterCollectionViewController: UICollectionViewController, UICollectionVi
         } catch {
             print("Unable to start notifier")
         }
-        
-        
+    }
+    
+    // MARK: - Calendar
+    func showLocationRequest(){
+        self.showLocationRequestController(setTitle: "We need your location for some awesome features", setAllowButtonTitle: "Alright", setNotNowButtonTitle: "Not now", setMapViewAlphaValue: 0.7, setBackgroundViewColor: UIColor(red:0, green:0.56, blue:0.8, alpha:1))
     }
 }
