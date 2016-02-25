@@ -6,6 +6,7 @@ def new_pods
     pod 'Alamofire', '~> 3.0'
     pod 'AlamofireImage', '~> 2.0'
     pod 'ReachabilitySwift', '~> 2.3'
+    pod "STLocationRequest"
 end
 
 def test_pods
