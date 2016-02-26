@@ -15,16 +15,4 @@ class PostCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var postDateLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var descLabel: UILabel!
-    
-    //    required init?(coder aDecoder: NSCoder) {
-    //        super.init(coder: aDecoder)
-    //    }
-    
-//    deinit {
-//        postImageView = nil
-//        postTitleLabel = nil
-//        postDateLabel = nil
-//        locationLabel = nil
-//        descLabel = nil
-//    }
 }
