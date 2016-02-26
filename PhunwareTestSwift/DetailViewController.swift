@@ -15,7 +15,7 @@ class DetailViewController: UIViewController, UIScrollViewDelegate, MFMailCompos
     
     @IBOutlet weak var dateLabel: UILabel! {
         didSet {
-            //            dateLabel.textColor = .purpleColor()
+            dateLabel.textColor = .whiteColor()
         }
     }
     
@@ -39,10 +39,9 @@ class DetailViewController: UIViewController, UIScrollViewDelegate, MFMailCompos
         loadViews()
         if let detail = self.detailItem {
             titleLabel?.text = detail.title
-            dateLabel?.text = detail.convertToLocalTimeWithString(detail.date!)
+            dateLabel?.text = detail.convertToLocalTimeWithString(detail.date)
             postTextView?.text = detail.desc
-            postImageView?.setImageWithUrl(detail.imageURL!, placeHolderImage: UIImage(named: "placeholder"))
-            
+            postImageView?.setImageWithUrl(detail.imageURL, placeHolderImage: UIImage(named: "placeholder"))
         }
         
         if let phone = self.detailItem?.phone {
@@ -105,7 +104,7 @@ class DetailViewController: UIViewController, UIScrollViewDelegate, MFMailCompos
             titleNavLabel!.textAlignment = .Center
             titleNavLabel!.font = UIFont(name: "Avenir-Book", size: 18)
             titleNavLabel!.textColor = .whiteColor()
-            titleNavLabel!.text = self.detailItem?.title!.uppercaseString
+            titleNavLabel!.text = self.detailItem?.title.uppercaseString
             customNavView.addSubview(titleNavLabel!)
             
             self.navigationItem.titleView = customNavView
@@ -154,7 +153,7 @@ class DetailViewController: UIViewController, UIScrollViewDelegate, MFMailCompos
         if ((self.postImageView!.image) != nil) {
             items = [self, postImageView.image!, ""]
         } else {
-            items = [self, self.detailItem!.title!]
+            items = [self, self.detailItem!.title]
         }
         
         let activityViewController = UIActivityViewController(activityItems: items, applicationActivities: nil)
@@ -179,18 +178,18 @@ class DetailViewController: UIViewController, UIScrollViewDelegate, MFMailCompos
     }
     
     func activityViewController(activityViewController: UIActivityViewController, itemForActivityType activityType: String) -> AnyObject? {
-        let postTitle = String(format:"Check out %@", self.detailItem!.title!)
+        let postTitle = String(format:"Check out %@", self.detailItem!.title)
         let postDesc = "\(self.detailItem!.desc)"
         
         if activityType == UIActivityTypeMail {
             //            activityViewController.setValue(postTitle, forKey: "subject")
             let body:NSMutableString = NSMutableString()
             body.appendString("<html><body><h2>")
-            body.appendString(self.detailItem!.title!)
+            body.appendString(self.detailItem!.title)
             body.appendString("</h2><p>")
-            body.appendString("Location: \(self.detailItem!.locationLineOne!) \(self.detailItem!.locationLineTwo!)")
+            body.appendString("Location: \(self.detailItem!.locationLineOne) \(self.detailItem!.locationLineTwo)")
             body.appendString("</p><p>")
-            body.appendString(self.detailItem!.desc!)
+            body.appendString(self.detailItem!.desc)
             body.appendString("</p></body></html>")
             return body
         } else if activityType == UIActivityTypePostToTwitter {
@@ -204,7 +203,7 @@ class DetailViewController: UIViewController, UIScrollViewDelegate, MFMailCompos
     }
     
     func activityViewController(activityViewController: UIActivityViewController, subjectForActivityType activityType: String?) -> String {
-        let postTitle = String(format:"Check out %@", self.detailItem!.title!)
+        let postTitle = String(format:"Check out %@", self.detailItem!.title)
         if activityType == UIActivityTypeMail {
             return postTitle
         } else {

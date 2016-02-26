@@ -81,10 +81,10 @@ class MasterCollectionViewController: UICollectionViewController, UICollectionVi
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! PostCollectionViewCell
         let model:StarWars = self.objects[indexPath.row]
         cell.postTitleLabel?.text = model.title
-        cell.postDateLabel?.text = model.convertToLocalTimeWithString(model.date!)
+        cell.postDateLabel?.text = model.convertToLocalTimeWithString(model.date)
         cell.locationLabel?.text = "\(model.locationLineOne) \(model.locationLineTwo)"
         cell.descLabel?.text = model.desc
-        cell.postImageView.setImageWithUrl(model.imageURL!, placeHolderImage: UIImage(named: "placeholder"))
+        cell.postImageView.setImageWithUrl(model.imageURL, placeHolderImage: UIImage(named: "placeholder"))
         
         return cell
     }
