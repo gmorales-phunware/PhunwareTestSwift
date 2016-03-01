@@ -84,6 +84,7 @@ class MasterCollectionViewController: UICollectionViewController, UICollectionVi
         cell.postDateLabel?.text = model.convertToLocalTimeWithString(model.date)
         cell.locationLabel?.text = "\(model.locationLineOne) \(model.locationLineTwo)"
         cell.descLabel?.text = model.desc
+        cell.postImageView.alpha = 0.5
         cell.postImageView.setImageWithUrl(model.imageURL, placeHolderImage: UIImage(named: "placeholder"))
         
         return cell
