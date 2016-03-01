@@ -44,7 +44,8 @@ class DetailViewController: UIViewController, UIScrollViewDelegate, MFMailCompos
             postImageView?.setImageWithUrl(detail.imageURL, placeHolderImage: UIImage(named: "placeholder"))
         }
         
-        if let phone = self.detailItem?.phone {
+        let phoneNumber:String? = self.detailItem?.phone
+        if let phone = phoneNumber {
             phoneLabel?.text = "\(phone)"
         } else {
             phoneLabel?.text = "No Phone number available"
