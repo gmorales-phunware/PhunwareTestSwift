@@ -27,9 +27,7 @@
 		00F3F2C11C6ECEFE00C283A5 /* GMHudView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F3F2BC1C6ECEFE00C283A5 /* GMHudView.m */; };
 		00F3F2C21C6ECEFE00C283A5 /* GMHUDWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F3F2BE1C6ECEFE00C283A5 /* GMHUDWindow.m */; };
 		00F3F2C31C6ECEFE00C283A5 /* GMHUDWindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F3F2C01C6ECEFE00C283A5 /* GMHUDWindowViewController.m */; };
-		00F3F2C71C6ED81E00C283A5 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00F3F2C61C6ED81E00C283A5 /* Quick.framework */; };
 		A8AF9ADF607FC7B4AFFC28CF /* Pods_PhunwareTestSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 768901F50013C2959228E296 /* Pods_PhunwareTestSwift.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		D99EB1B99128934AC0AC3778 /* Pods_PhunwareTestSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1FFFB6F2B4E968C61F2294 /* Pods_PhunwareTestSwiftTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,8 +112,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00F3F2C71C6ED81E00C283A5 /* Quick.framework in Frameworks */,
-				D99EB1B99128934AC0AC3778 /* Pods_PhunwareTestSwiftTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,12 +302,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00F3F2A01C6E2E6F00C283A5 /* Build configuration list for PBXNativeTarget "PhunwareTestSwiftTests" */;
 			buildPhases = (
-				CD95405BFEB476DBE5D2B11C /* Check Pods Manifest.lock */,
 				00F3F2951C6E2E6F00C283A5 /* Sources */,
 				00F3F2961C6E2E6F00C283A5 /* Frameworks */,
 				00F3F2971C6E2E6F00C283A5 /* Resources */,
-				BFD8F2A22E5399D2A0B031C0 /* Embed Pods Frameworks */,
-				755592F51EE8A54C970B1D90 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -409,52 +402,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhunwareTestSwift/Pods-PhunwareTestSwift-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		755592F51EE8A54C970B1D90 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhunwareTestSwiftTests/Pods-PhunwareTestSwiftTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		A81AA0CF7167E287546B0660 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		BFD8F2A22E5399D2A0B031C0 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhunwareTestSwiftTests/Pods-PhunwareTestSwiftTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CD95405BFEB476DBE5D2B11C /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
