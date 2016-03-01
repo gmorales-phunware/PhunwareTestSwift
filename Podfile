@@ -18,6 +18,6 @@ target 'PhunwareTestSwift' do
 end
 
 target 'PhunwareTestSwiftTests' do
-    test_pods
+    
 end
 
